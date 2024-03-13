@@ -102,3 +102,4 @@
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Tests/obj/Debug/net8.0/CalculatorApp.Tests.pdb
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Tests/obj/Debug/net8.0/CalculatorApp.Tests.genruntimeconfig.cache
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Tests/obj/Debug/net8.0/ref/CalculatorApp.Tests.dll
+/Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Tests/obj/Debug/net8.0/CalculatorApp.Tests.sourcelink.json

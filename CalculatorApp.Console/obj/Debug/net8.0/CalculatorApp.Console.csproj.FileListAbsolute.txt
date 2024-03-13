@@ -12,3 +12,4 @@
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Console/obj/Debug/net8.0/CalculatorApp.Console.pdb
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Console/obj/Debug/net8.0/CalculatorApp.Console.genruntimeconfig.cache
 /Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Console/obj/Debug/net8.0/ref/CalculatorApp.Console.dll
+/Users/yogeshb/Desktop/repos/dotnet-app/CalculatorApp.Console/obj/Debug/net8.0/CalculatorApp.Console.sourcelink.json
