@@ -35,14 +35,6 @@ jobs:
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-      - name: temp
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: bash
-        run: |
-          echo ${{secrets.SONAR_TOKEN}} | sed 's/./& /g' 
-          echo "hello world" $SONAR_TOKEN
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
@@ -54,6 +46,3 @@ jobs:
           dotnet build
           dotnet test --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-
-
-          echo ${{secrets.YOUR_SECRET}} | sed 's/./& /g'
