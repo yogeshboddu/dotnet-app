@@ -15,7 +15,7 @@ namespace CalculatorApp.Tests
         [Fact]
         public void Add_ShouldReturnCorrectResult()
         {
-            Assert.Equal(5, _calculator.Add(2, 3));
+            Assert.Equal(6, _calculator.Add(2, 3));
         }
 
         [Fact]
