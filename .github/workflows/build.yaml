@@ -36,6 +36,7 @@ jobs:
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+          New-Item -Path .\.sonar\coverage -ItemType Directory
           dotnet tool update dotnet-coverage --tool-path .\.sonar\coverage
       - name: Build and analyze
         env:
