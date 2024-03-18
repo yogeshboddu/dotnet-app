@@ -42,7 +42,7 @@ namespace CalculatorApp.Tests
             Assert.Throws<ArgumentException>(() => _calculator.Divide(10, 0));
         }
         [Fact]
-        public void getReminder()
+        public void GetReminder()
         {
             Assert.Equal(0, _calculator.Reminder(10, 5));
         }
