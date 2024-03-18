@@ -27,5 +27,9 @@ namespace CalculatorApp
             }
             return a / b;
         }
+        public int Reminder(int a, int b)
+        {
+            return a % b;
+        }
     }
 }
