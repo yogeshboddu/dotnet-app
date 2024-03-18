@@ -4,6 +4,7 @@ namespace CalculatorApp
 {
     public class Calculator
     {
+        static HttpClient client = new HttpClient();
         public int Add(int a, int b)
         {
             return a + b;
@@ -31,5 +32,9 @@ namespace CalculatorApp
         {
             return a % b;
         }
+    public async Task<HttpResponseMessage> GetGoogleAsync()
+    {
+        return await client.GetAsync("http://www.google.com");
+    }
     }
 }

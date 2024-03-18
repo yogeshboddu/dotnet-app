@@ -1,5 +1,8 @@
 using CalculatorApp;
 using Xunit;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace CalculatorApp.Tests
 {
@@ -22,6 +25,19 @@ namespace CalculatorApp.Tests
         public void Subtract_ShouldReturnCorrectResult()
         {
             Assert.Equal(2, _calculator.Subtract(5, 3));
+        }
+
+        [Fact]
+        public void Test_GetGoogleAsync()
+        {
+            // Arrange
+            var response = _calculator.GetGoogleAsync().Result;
+
+            // Act
+            var content = response.Content.ReadAsStringAsync().Result;
+
+            // Assert
+            Assert.NotEmpty(content);
         }
 
         [Fact]
