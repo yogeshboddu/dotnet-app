@@ -25,6 +25,12 @@ namespace CalculatorApp.Tests
         }
 
         [Fact]
+        public void Subtract_ShouldReturnCorrectResult9()
+        {
+            Assert.Equal(9, _calculator.Subtract(5, 4));
+        }
+
+        [Fact]
         public void Multiply_ShouldReturnCorrectResult()
         {
             Assert.Equal(15, _calculator.Multiply(3, 5));
