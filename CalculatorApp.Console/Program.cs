@@ -15,6 +15,6 @@ class Program
 
     static async Task<HttpResponseMessage> GetGoogleAsync()
     {
-        return await client.GetAsync("http://www.google.com");
+        return await client.GetAsync("http://localhost:8080");
     }
 }
