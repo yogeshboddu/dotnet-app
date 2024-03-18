@@ -34,7 +34,7 @@ namespace CalculatorApp
         }
     public async Task<HttpResponseMessage> GetGoogleAsync()
     {
-        return await client.GetAsync("http://www.google.com");
+        return await client.GetAsync("https://www.google.com");
     }
     }
 }
