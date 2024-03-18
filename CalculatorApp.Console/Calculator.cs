@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http.Headers;
+using System.Text;
 
 namespace CalculatorApp
 {
@@ -35,12 +36,22 @@ namespace CalculatorApp
             return a % b;
         }
 
-        public async Task<HttpResponseMessage> GetGoogleAsync()
-        {   
-  client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "asdasdasd13131easdasd13");
+public async Task<HttpResponseMessage> GetGoogleAsync()
+{
+    string username = "admin";
+    string password = "myPassword123456";
 
-        // Make the GET request
-        return await client.GetAsync("https://www.google.com");
-        }
+    // Create a byte array of the username and password
+    var byteArray = Encoding.ASCII.GetBytes(username + ":" + password);
+
+    // Convert the byte array to a Base64 string
+    var authorization = Convert.ToBase64String(byteArray);
+
+    // Add the Authorization header with the Basic scheme and the Base64 string
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authorization);
+
+    // Make the GET request
+    return await client.GetAsync("https://www.google.com");
+}
     }
 }
