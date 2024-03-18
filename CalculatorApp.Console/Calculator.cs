@@ -1,10 +1,12 @@
 using System;
+using System.Net.Http.Headers;
 
 namespace CalculatorApp
 {
     public class Calculator
     {
         static HttpClient client = new HttpClient();
+
         public int Add(int a, int b)
         {
             return a + b;
@@ -32,9 +34,13 @@ namespace CalculatorApp
         {
             return a % b;
         }
-    public async Task<HttpResponseMessage> GetGoogleAsync()
-    {
+
+        public async Task<HttpResponseMessage> GetGoogleAsync()
+        {   
+  client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "asdasdasd13131easdasd13");
+
+        // Make the GET request
         return await client.GetAsync("https://www.google.com");
-    }
+        }
     }
 }
