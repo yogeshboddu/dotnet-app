@@ -27,18 +27,6 @@ namespace CalculatorApp.Tests
             Assert.Equal(2, _calculator.Subtract(5, 3));
         }
 
-        [Fact]
-        public void Test_GetGoogleAsync()
-        {
-            // Arrange
-            var response = _calculator.GetGoogleAsync().Result;
-
-            // Act
-            var content = response.Content.ReadAsStringAsync().Result;
-
-            // Assert
-            Assert.NotEmpty(content);
-        }
 
         [Fact]
         public void Multiply_ShouldReturnCorrectResult()

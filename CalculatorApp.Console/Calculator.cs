@@ -42,11 +42,5 @@ namespace CalculatorApp
         // Make the GET request
         return await client.GetAsync("https://www.google.com");
     }
-        public async Task<HttpResponseMessage> GetGoogleAsync2()
-    {
-
-        // Make the GET request
-        return await client.GetAsync("https://www.google.com");
-    }
     }
 }
