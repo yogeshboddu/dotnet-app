@@ -36,22 +36,17 @@ namespace CalculatorApp
             return a % b;
         }
 
-public async Task<HttpResponseMessage> GetGoogleAsync()
-{
-    string username = "admin";
-    string password = "myPassword123456";
+    public async Task<HttpResponseMessage> GetGoogleAsync()
+    {
 
-    // Create a byte array of the username and password
-    var byteArray = Encoding.ASCII.GetBytes(username + ":" + password);
+        // Make the GET request
+        return await client.GetAsync("https://www.google.com");
+    }
+        public async Task<HttpResponseMessage> GetGoogleAsync2()
+    {
 
-    // Convert the byte array to a Base64 string
-    var authorization = Convert.ToBase64String(byteArray);
-
-    // Add the Authorization header with the Basic scheme and the Base64 string
-    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authorization);
-
-    // Make the GET request
-    return await client.GetAsync("https://www.google.com");
-}
+        // Make the GET request
+        return await client.GetAsync("https://www.google.com");
+    }
     }
 }
