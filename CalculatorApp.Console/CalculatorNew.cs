@@ -45,7 +45,7 @@ namespace CalculatorApp
     {
 
         // Make the GET request
-        return await client.GetAsync("http://www.google.com");
+        return await client.GetAsync("https://www.google.com");
     }
     }
 }
