@@ -17,5 +17,6 @@ jobs:
           export CODACY_ORGANIZATION_PROVIDER=gh
           export CODACY_USERNAME=yogeshboddu
           export CODACY_PROJECT_NAME=dotnet-app
-          dotnet test --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage"
+            dotnet test --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage"
+            mv ./TestResults/*/coverage.cobertura.xml ./TestResults/*/coverage.xml
           bash <(curl -Ls https://coverage.codacy.com/get.sh)
