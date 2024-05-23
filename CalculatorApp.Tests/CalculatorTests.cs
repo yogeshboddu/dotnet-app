@@ -31,7 +31,7 @@ namespace CalculatorApp.Tests
         [Fact]
         public void Multiply_ShouldReturnCorrectResult()
         {
-            Assert.Equal(16, _calculator.Multiply(3, 5));
+            Assert.Equal(15, _calculator.Multiply(3, 5));
         }
 
         [Fact]
