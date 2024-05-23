@@ -12,6 +12,10 @@ namespace CalculatorApp
         {
             return a + b;
         }
+        public int Add1(int a, int b)
+        {
+            return a + b;
+        }
 
         public int Subtract(int a, int b)
         {
