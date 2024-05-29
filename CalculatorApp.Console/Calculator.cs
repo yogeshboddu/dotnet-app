@@ -42,7 +42,8 @@ namespace CalculatorApp
         // Method with SQL injection vulnerability
         public void ConnectToDatabase(string userInput)
         {
-            string connectionString = "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;";
+            string password = "xx123abc124";
+            string connectionString = $"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password='{password}';";
             
             // Create a SQL query using the user input directly
             string query = $"SELECT * FROM Users WHERE Username = '{userInput}'";
