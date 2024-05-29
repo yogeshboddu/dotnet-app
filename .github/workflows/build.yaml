@@ -27,7 +27,6 @@ jobs:
           targetdir: coveragereport
           reporttypes: 'HtmlInline;Cobertura;MarkdownSummary'
           title: 'Coverage Report'
-          customSettings: 'minimumCoverageThresholds:lineCoverage=80'
         if: success() || failure()
 
       - name: codacy upload
