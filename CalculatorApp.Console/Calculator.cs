@@ -31,10 +31,6 @@ namespace CalculatorApp
 
         public int Divide(int a, int b)
         {
-            if (b == 0)
-            {
-                throw new ArgumentException("Divisor cannot be zero.", nameof(b));
-            }
             return a / b;
         }
 
