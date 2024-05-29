@@ -39,6 +39,27 @@ namespace CalculatorApp
             return a % b;
         }
 
+        // Method with SQL injection vulnerability
+        public void ConnectToDatabase(string userInput)
+        {
+            string connectionString = "Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;";
+            
+            // Create a SQL query using the user input directly
+            string query = $"SELECT * FROM Users WHERE Username = '{userInput}'";
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Console.WriteLine($"User: {reader["Username"]}, Email: {reader["Email"]}");
+                }
+            }
+        }
+
         // Method with hardcoded credentials
         public void ConnectToDatabase()
         {
