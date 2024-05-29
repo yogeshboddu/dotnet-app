@@ -17,5 +17,15 @@ jobs:
           export CODACY_ORGANIZATION_PROVIDER=gh
           export CODACY_USERNAME=yogeshboddu
           export CODACY_PROJECT_NAME=dotnet-app
-            dotnet test --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage"
+          dotnet test --logger "trx;LogFileName=test-results.trx" --collect:"XPlat Code Coverage"
+
           bash <(curl -Ls https://coverage.codacy.com/get.sh)
+      - name: Generate Test Coverage Report
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.26
+        with:
+          reports: '**/TestResults/*/coverage.cobertura.xml'
+          targetdir: coveragereport
+          reporttypes: 'HtmlInline;Cobertura;MarkdownSummary'
+          title: 'Coverage Report'
+          customSettings: 'minimumCoverageThresholds:lineCoverage=80'
+        if: success() || failure()
