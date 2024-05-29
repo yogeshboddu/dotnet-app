@@ -30,5 +30,10 @@ jobs:
         if: success() || failure()
 
       - name: codacy upload
-        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
+        run: |
+          export CODACY_API_TOKEN=8SkM1M6hxUP6nG43nSdL
+          export CODACY_ORGANIZATION_PROVIDER=gh
+          export CODACY_USERNAME=yogeshboddu
+          export CODACY_PROJECT_NAME=dotnet-app
+          bash <(curl -Ls https://coverage.codacy.com/get.sh)
         if: success() || failure()
