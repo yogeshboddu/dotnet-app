@@ -1,3 +1,5 @@
 records:
 - name: example.com
   value: 192.0.4.1
+- name: temp.example.com
+  value: 12.234.12.12
