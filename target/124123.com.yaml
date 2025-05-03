@@ -2,3 +2,7 @@
 - ttl: 300
   type: A
   value: 191.0.1.1
+tyre:
+- ttl: 300
+  type: A
+  value: 191.0.1.1
