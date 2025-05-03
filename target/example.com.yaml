@@ -1,0 +1,4 @@
+hello:
+- ttl: 300
+  type: A
+  value: 192.0.1.1
