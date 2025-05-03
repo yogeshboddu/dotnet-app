@@ -2,3 +2,7 @@ hello:
 - ttl: 300
   type: A
   value: 192.0.1.1
+hello1:
+- ttl: 300
+  type: A
+  value: 191.0.1.1
