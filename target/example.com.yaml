@@ -1,6 +1,5 @@
----
-? ''
-: ttl: 86400
+"":
+  ttl: 86400
   type: NS
   values:
   - ns-cloud-d1.googledomains.com.
@@ -11,9 +10,6 @@
   - ns-1981.awsdns-55.co.uk.
   - ns-390.awsdns-48.com.
   - ns-1331.awsdns-38.org.
-test:
-  type: A
-  value: 34.206.176.23
 ff:
   type: NS
   values:
@@ -25,6 +21,14 @@ ff:
   - ns-868.awsdns-44.net.
   - ns-203.awsdns-25.com.
   - ns-1408.awsdns-48.org.
+hello:
+- ttl: 300
+  type: A
+  value: 192.0.1.1
+hello1:
+- ttl: 300
+  type: A
+  value: 191.0.1.1
 ld:
   type: NS
   values:
@@ -36,11 +40,10 @@ ld:
   - ns-47.awsdns-05.com.
   - ns-1432.awsdns-51.org.
   - ns-1811.awsdns-34.co.uk.
-hello:
-- ttl: 300
+test:
   type: A
-  value: 192.0.1.1
-hello1:
+  value: 34.206.176.23
+test123:
 - ttl: 300
   type: A
   value: 191.0.1.1
