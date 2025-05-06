@@ -1,3 +1,9 @@
+oijihouh:
+  ttl: 300
+  type: A
+  values:
+  - 191.0.1.1
+  - 191.0.1.2
 weqsd:
 - ttl: 300
   type: A
