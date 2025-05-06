@@ -1,0 +1,4 @@
+qasd:
+- ttl: 300
+  type: A
+  value: 191.0.1.1
