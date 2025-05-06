@@ -1,14 +1,15 @@
 ---
 ? ''
 : ttl: 86400
-  type: NS
-  values:
-  - ns-cloud-b1.googledomains.com.
-  - ns-cloud-b2.googledomains.com.
-  - ns-cloud-b3.googledomains.com.
-  - ns-cloud-b4.googledomains.com.
-test:
+iuojoi.as4er:
+- ttl: 300
   type: A
-  value: 8.8.8.8
-
-# GCP projectID: dojo-infra
+  values:
+  - 191.0.1.1
+  - 191.0.1.2
+type: NS
+values:
+- ns-cloud-b1.googledomains.com.
+- ns-cloud-b2.googledomains.com.
+- ns-cloud-b3.googledomains.com.
+- ns-cloud-b4.googledomains.com.
