@@ -8,10 +8,6 @@
   - ns-cloud-b3.googledomains.com.
   - ns-cloud-b4.googledomains.com.
 
-test:
-  type: A
-  value: 8.8.8.8
-
 # GCP projectID: dojo-infra
 
 kjhcvb:
@@ -19,4 +15,12 @@ kjhcvb:
   values:
   - 191.0.1.1
   - 191.0.1.2
+  ttl: 300
+
+test:
+  type: A
+  values:
+    - 191.0.1.1
+    - 191.0.54.2
+    - 10.12.54.12
   ttl: 300
