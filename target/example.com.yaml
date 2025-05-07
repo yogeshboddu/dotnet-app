@@ -20,3 +20,8 @@ test:
   type: A
   value: 191.0.1.44
   ttl: 300
+
+ex:
+  type: A
+  value: 43.0.45.44
+  ttl: 300
