@@ -1,22 +1,17 @@
 ---
 ? ''
-: ttl: 86400
-  type: NS
-  values:
-  - ns-cloud-b1.googledomains.com.
-  - ns-cloud-b2.googledomains.com.
-  - ns-cloud-b3.googledomains.com.
-  - ns-cloud-b4.googledomains.com.
-
-test:
-  type: A
-  value: 8.8.8.8
-
-# GCP projectID: dojo-infra
-
-kjhcvb:
-  type: A
-  values:
-  - 191.0.1.1
-  - 191.0.1.2
-  ttl: 300
+: - type: MX
+    values:
+    - exchange: aspmx.l.google.com.
+      preference: 1
+    - exchange: alt1.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt2.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt3.aspmx.l.google.com.
+      preference: 10
+    - exchange: alt4.aspmx.l.google.com.
+      preference: 10
+  - type: TXT
+    values:
+    - google-site-verification=ArplKebpAADYlY3nzLZG9sRLu7vp1M_I2VpDJlTpIUg
