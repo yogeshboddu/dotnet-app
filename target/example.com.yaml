@@ -15,8 +15,3 @@
   - type: TXT
     values:
     - google-site-verification=ArplKebpAADYlY3nzLZG9sRLu7vp1M_I2VpDJlTpIUg
-
-test:
-  type: A
-  value: 191.0.1.44
-  ttl: 300
