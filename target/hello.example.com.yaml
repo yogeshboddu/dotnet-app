@@ -2,3 +2,8 @@ hello.example.com:
 - ttl: 300
   type: A
   value: 192.0.1.1
+tep:
+  ttl: 300
+  type: A
+  value: 43.0.45.44
+
